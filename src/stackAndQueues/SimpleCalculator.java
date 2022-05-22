@@ -8,15 +8,12 @@ public class SimpleCalculator {
         Scanner scanner = new Scanner(System.in);
         String expression = scanner.nextLine();
         Deque<String> stack = new ArrayDeque<>();
-        Integer finalSum = 0;
+        Integer finalSum;
         String[] tokens = expression.split("\\s+");
-
-        for (String token : tokens) {
-            stack.add(token);
-        }
+        Collections.addAll(stack, tokens);
 
         while(true) {
-            Integer sum = 0;
+            Integer sum;
             String firstNumber = stack.pop();
             if(stack.isEmpty()) {
                 finalSum = Integer.parseInt(firstNumber);
