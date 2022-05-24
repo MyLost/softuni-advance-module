@@ -9,7 +9,7 @@ public class BalancedParentheses {
         Scanner scanner = new Scanner(System.in);
 //      System.out.println("{[()]}".substring(0, "{[()]}".length()/2));
 //      System.out.println("{[()]}".substring("{[()]}".length()/2, "{[()]}".length()));
-        String expression = scanner.nextLine();
+        String expression = scanner.nextLine().replaceAll("\\s+", "");
         Deque<Character> leftStack = new ArrayDeque<>();
         boolean isBalanced = true;
         String leftSide = expression.substring(0, expression.length()/2);
@@ -32,7 +32,7 @@ public class BalancedParentheses {
                 }
             }
         }
-        if(isBalanced) {
+        if(isBalanced && leftStack.isEmpty()) {
             System.out.println("YES");
         } else {
             System.out.println("NO");
