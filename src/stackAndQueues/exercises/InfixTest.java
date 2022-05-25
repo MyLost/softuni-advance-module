@@ -112,7 +112,7 @@ class InfixTest {
     public static void main(String[] args)
     {
         // Considering random infix string notation
-        String expression = "( 3 + x ) - y";
+        String expression = "7 + 13 /  12 - 4 ";
 
         // Printing RPN for the above infix notation
         // Illustrating shunting yard algorithm

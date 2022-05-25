@@ -22,13 +22,17 @@ public class InfixToPostfix {
            } else if(token.equals("+") || token.equals("-") || token.equals("/") || token.equals("*") || token.equals("^")) {
                if(token.equals("/")) {
                    if (!operatorStack.isEmpty()) {
-                       String operatorWithLowerPrecedence = operatorStack.pop();
+                       String currentOperator = operatorStack.pop();
                        operatorStack.push(token);
-                       operatorStack.push(operatorWithLowerPrecedence);
+                       operatorStack.push(currentOperator);
                    } else {
                        operatorStack.push(token);
                    }
-               } else {
+               } else  if (!operatorStack.isEmpty() && operatorStack.peek().equals("+") && token.equals("+")) {
+                       String currentOperator = operatorStack.pop();
+                       operatorStack.push(token);
+                       outputQueue.push(currentOperator);
+               }else{
                    operatorStack.push(token);
                }
            } else {
