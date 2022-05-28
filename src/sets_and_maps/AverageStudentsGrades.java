@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 public class AverageStudentsGrades {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         Map<String, List<Double>> records = new TreeMap<>();
         int n = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < n ; i++) {
