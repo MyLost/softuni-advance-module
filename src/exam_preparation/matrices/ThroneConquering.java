@@ -1,4 +1,4 @@
-package exam_preparation;
+package exam_preparation.matrices;
 
 import java.util.Arrays;
 import java.util.Scanner;
