@@ -6,11 +6,15 @@ import java.util.stream.Collectors;
 public class Blacksmith {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         String[] sequenceOne = scanner.nextLine().split("\\s+");
         String[] sequenceTwo = scanner.nextLine().split("\\s+");
+
         Map<String, Integer> swords = new TreeMap<>();
+
         Deque<Integer> steel = new ArrayDeque<>();
         Deque<Integer> carbon = new ArrayDeque<>();
+
         int totalNumberOfSwords = 0;
         Arrays.stream(sequenceOne).forEach(item -> steel.push(Integer.parseInt(item)));
         Arrays.stream(sequenceTwo).forEach(item -> carbon.push(Integer.parseInt(item)));
