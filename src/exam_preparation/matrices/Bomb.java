@@ -72,7 +72,7 @@ public class Bomb {
                 return;
             }
         }
-        System.out.printf("%d bombs left on the field. Sapper position: (%d,%d)",bombCounter - bombFound, sapperRow, sapperCol);
+        System.out.printf("%d bombs left on the field. Sapper position: (%d,%d)",bombCounter - bombFound,  sapperRow, sapperCol);
     }
 
 
